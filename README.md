@@ -14,6 +14,10 @@ This is a simple `bash` script that uses `awk` to colorize the output of `xentop
 ## Screenshots
 <img width="1470" height="335" alt="image" src="https://github.com/user-attachments/assets/34542d24-1ee1-4be4-b0df-7375d58ce9d0" />
 
+## Other Utilities
+
+See [the qubes-utils repo](https://github.com/Atrate/qubes-utils) for links to other utilities I've written for Qubes.
+
 ## License
 This project is licensed under the [AGPL-3.0-or-later](https://www.gnu.org/licenses/agpl-3.0.html).
 
