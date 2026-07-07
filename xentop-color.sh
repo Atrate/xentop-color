@@ -1,7 +1,7 @@
 #!/bin/bash --posix
 
 # ------------------------------------------------------------------------------
-# Copyright (C) 2025 Atrate
+# Copyright (C) 2025-2026 Atrate
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as
@@ -313,10 +313,13 @@ main()
         # Header line. Detected by the string "NAME". Do not name your VMs "NAME"...
         case "$line" in
             *NAME*)
-                clear
                 if ! [ -z "$buffer" ]
                 then
-                    echo -e "$buffer" | awk "$AWKSCRIPT" | column -t -R 0 | tr '=' ' '
+                    buffer="$(clear; echo -e "$buffer" \
+                        | awk "$AWKSCRIPT" \
+                        | column -t -R 0 \
+                        | tr '=' ' ')"
+                    echo -e "$buffer"
                     buffer=""
                 fi ;;
         esac
